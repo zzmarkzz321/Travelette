@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travelite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	{% for f, flight in flights.items() %}
+		<div>
+			<h1>Flight to {{flight.destination}}</h1>
+			<h2>Starting at {{flight.price}}</h2>
+			<h3>From {{flight.departure_date}} to {{flight.return_date}}</h3>
+			<a href="{{flight.book_url}}">Book Here</a>
+			{% for hotel in flight.hotels %}
+				<div>
+					<h4>Hotel {{hotel.property_name}} at {{hotel.address.line1}} available for {{hotel.total_price.amount}}</h4>
+				</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+</body>
+</html>

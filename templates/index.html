@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travelite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico" type="image/ico">
+	<link href="static/css/semantic.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="static/css/animations.css">
+	<link rel="stylesheet" href="static/css/card.css">
+</head>
+<body onload="init()">
+<a href="" style="color: white; text-decoration: none;"><p style="margin: 0em; left:10px; top:10px; position: fixed;">Some name<i class="plane white icon"></i></p></a>
+	<div id="booty">
+		<div id="landing">
+			<h1 id="header" class="bigEntrance">"Hey, I want to travel"</h1>
+			<input id="bt" type="submit" class="btn fadeIn" value="Set a budget for my trip">
+			<p>— or —</p>
+			<input id="bt2" type="submit" class="btn fadeIn" value="Plan me a random trip">
+		</div>
+		<div id="budget">
+			<h1>My budget is</h1>
+			<form action="/" method="POST">
+				$<input type="text" class="underline" name="budget" size="10" placeholder="25" style="height:30px;font-size:30px;">for<input type="text" class="underline" name="people" size="3" placeholder="1" style="height:30px;font-size:30px;">person(s)
+				<br><br><br>
+				<input id="search" type="submit" class="btn" value="Find a trip">
+			</form>
+			<a href="javascript:generate();" style="color: white; text-decoration: none;"><p>Nevermind, just generate anything</p></a>
+		</div>
+		<div id="generate">
+			<h1>Here's what we found: </h1>
+			<div class="ui three cards">
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Yosemite National Park</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Tokyo, Japan</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Disneyland, CA</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Niagra Falls</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					<!--
+						<span class="right floated">
+							<div class="ui buttons">
+								<button class="ui red basic button">
+									<i class="heart icon"></i>
+								</button>
+								<button class="ui grey basic button">
+									<i class="trash icon"></i>
+								</button>
+							</div>
+						</span>
+					-->
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Taj mahal</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Berlin Wall Memorial</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="static/js/semantic.js"></script>
+	<script>
+		jQuery.fn.center = function () {
+		    this.css("position","absolute");
+		    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
+		                                                $(window).scrollTop()) + "px");
+		    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+		                                                $(window).scrollLeft()) + "px");
+		    return this;
+		}
+		$(window).resize(function() {
+			var width = $(window).width();
+	    	var height = $(window).height();
+	    	if (!$('#landing').is(':hidden')) {
+  				$('#landing').center();
+			}
+	    	if (!$('#budget').is(':hidden')) {
+	    		$('#budget').center();
+	    	}
+	    	if (!$('#generate').is(':hidden')) {
+	    		$('#generate').center();
+			}
+		});
+		function init() {
+			$('#landing').center();
+		}
+		function generate() {
+			$('#budget').fadeOut(300);
+			$('#generate').addClass("slideLeft");
+			$('#generate').center();
+		}
+		$('#bt').click(function() {
+			$(this).addClass("floating");
+			setTimeout(function(){
+				$('#header').fadeOut(200);
+	    		$('#landing').fadeOut(300);
+	    		$('#budget').addClass("slideLeft");
+	    		$('#budget').center();
+			},500);
+		});
+
+		$('#bt2').click(function() {
+			$(this).addClass("floating");
+			setTimeout(function(){
+				$('#header').fadeOut(200);
+	    		$('#landing').fadeOut(300);
+	    		$('#generate').addClass("slideLeft");
+	    		$('#generate').center();
+			},500);
+		});
+
+		$('#search').click(function() {
+			$(this).addClass("floating");
+		});
+	</script>
+</body>
+</html>

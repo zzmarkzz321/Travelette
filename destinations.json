@@ -1,0 +1,79 @@
+{
+  "POI": [
+    {
+      "id": "1",
+      "Destination": "Yosemite National Park",
+      "Location": "Yosemite National Park, CA"
+    },
+    {
+      "id": "2",
+      "Destination": "Disneyland Park",
+      "Location": "Anaheim, CA"
+    },
+    {
+      "id": "3",
+      "Destination": "Golden Gate Bridge",
+      "Location": "San Francisco, CA"
+    },
+    {
+      "id": "4",
+      "Destination": "SeaWorld San Diego",
+      "Location": "San Diego, CA"
+    },
+    {
+      "id": "5",
+      "Destination": "Lake Tahoe",
+      "Location": "Tahoe City, CA"
+    },
+    {
+      "id": "6",
+      "Destination": "Las Vegas Strip",
+      "Location": "Las Vegas, NV"
+    },
+    {
+      "id": "7",
+      "Destination": "Grand Canyon National Park",
+      "Location": "Grand Canyon, AZ"
+    },
+    {
+      "id": "8",
+      "Destination": "The White House",
+      "Location": "Washington, DC"
+    },
+    {
+      "id": "9",
+      "Destination": "Niagara Falls",
+      "Location": "ON, Canada"
+    },
+    {
+      "id": "10",
+      "Destination": "Statue of Liberty",
+      "Location": "New York, NY"
+    },
+    {
+      "id": "11",
+      "Destination": "Eiffel Tower",
+      "Location": "Paris, France"
+    },
+    {
+      "id": "12",
+      "Destination": "Colosseum",
+      "Location": "Rome, Italy"
+    },
+    {
+      "id": "13",
+      "Destination": "Taj Mahal",
+      "Location": "Agra, India"
+    },
+    {
+      "id": "14",
+      "Destination": "Great Wall, Mutianyu",
+      "Location": "Beijing, China"
+    },
+    {
+      "id": "15",
+      "Destination": "Berlin Wall Memorial",
+      "Location": "Berlin, Germany"
+    }
+  ]
+}
